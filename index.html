@@ -1,48 +1,68 @@
-	<!DOCTYPE html>
-	<html>
-	    <head>
-            <!-- Required meta tags always come first -->
-            <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-            <meta http-equiv="x-ua-compatible" content="ie=edge">
-            <!-- Bootstrap CSS -->
-            <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-        </head>
-	
-	    <body>
-            <h1>This is a Header</h1>
-            <div>
-                <div class="container">
-                    <div class="row">
-                        <header class="jumbotron container">
-                            <div class="col-12 col-sm-6"> 1 </div>
-                            <div class="col-12 col-sm"> 2 </div>
-                            <div class="col-12 col-sm-4 col-md-3"> 3 </div> 
-                            <div class="col col-sm col-md"> 4 </div>
-                            <div class="col-12 col-sm-4 order-sm-last col-md-3"> 9 </div>
-                            <div class="col col-sm order-sm-first col-md"> 10 </div>
-                            <div class="col-4 offset-1 col-sm-2">
-                                <ul>11</ul>
-                            </div>
-                        </header>
-                    </div>
-                    <footer class="footer">
-                        <div class="col-4 col-sm-2"> 5 </div>
-    
-                        <div class="col-7 col-sm-5"> 6 </div>
-            
-                        <div class="col-12 col-sm-4"> 7 </div>
-            
-                        <div class="col-auto"> 8 </div>
-                    </footer>
-                </div>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- CSS -->
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>This is a Header</h1>
+    <div>
+        <div class="container">
+            <div class="row">
+                <header class="jumbotron container">
+                    <div class="col-12 col-sm-6"> 1 </div>
+                    <div class="col-12 col-sm"> 2 </div>
+                    <div class="col-12 col-sm-4 col-md-3"> 3 </div>
+                    <div class="col col-sm col-md"> 4 </div>
+                    <div class="col-12 col-sm-4 order-sm-last col-md-3"> 9 </div>
+                    <div class="col col-sm order-sm-first col-md"> 10 </div>
+                    <div class="row row-header"> ... </div>
+                </header>
+                <div class="row row-content align-items-center"> A </div>
+
+                <div class="row row-content align-items-center"> B </div>
+
+                <div class="row row-content align-items-center"> C </div>
+
             </div>
-            <p>This is a paragraph</p>
-            <p>This is a second paragraph</p>
-            <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
-            <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-            <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-            <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-        </body>
-        
-	</html>
+            <footer class="footer">
+                <div class="col-4 col-sm-2"> 5 </div>
+
+                <div class="col-7 col-sm-5"> 6 </div>
+
+                <div class="col-12 col-sm-4 align-self-center"> 7 </div>
+
+                <div class="col-auto"> 8 </div>
+                <div class="col-4 offset-1 col-sm-2">
+                    <ul class="list-unstyled"> 
+                        <div class="text-center">11</div> 
+                    </ul>
+                    <ul class="list-unstyled"> 
+                        <div class="text-center">12</div> 
+                    </ul>
+                    <ul class="list-unstyled">  
+                        <div class="text-center">13</div> 
+                    </ul>
+                </div>
+                <footer class="footer">
+                    <div class="row justify-content-center">Copyright 2018 Ristorante Con Fusion
+                        <div class="col-auto">
+                </footer>
+            </footer>
+        </div>
+    </div>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
