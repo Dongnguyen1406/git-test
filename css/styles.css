@@ -39,5 +39,14 @@ body{
     border-bottom: 1px solid #ddd;
     padding: 10px;
 }
+.h1, h1 {
+    font-size: 1.7rem;
+}
+.mb-5, .my-5 {
+    margin-bottom: 2rem!important;
 
+}
+button.btn.btn-primary {
+    margin-left: 3cm;
+}
 
