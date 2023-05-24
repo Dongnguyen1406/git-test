@@ -24,8 +24,6 @@
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                </div>
-                <div class="col-12 col-sm-5">
                     <a class="navbar-brand" href="#"><img src="Bootstrap4 (1)/Bootstrap4/conFusion/img/img/logo.png"
                             height="30" width="41"></a>
                 </div>
@@ -68,7 +66,7 @@
                         <br><br>
                         <a role="button" class="btn btn-block nav-link btn-warning" data-toggle="tooltip"
                             data-html="true" title="Or Call us at  <br><strong>+852 12345678</strong>"
-                            data-placement="bottom" href="#reserveform">Reserve Table</a>
+                            data-placement="bottom" href="#reserve-form">Reserve Table</a>
                     </div>
                 </div>
             </div>
@@ -77,9 +75,64 @@
 
     <div class="container">
         <br><br>
+        <div class="row row-content">
+            <div class="col">
+                <div id="mycarousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <img class="d-block img-fluid" src="Bootstrap4 (1)/Bootstrap4/conFusion/img/img/uthappizza.png" alt="Uthappizza">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h2>Uthappizza
+                                    <span class="badge badge-danger">HOT</span>
+                                    <span class="badge badge-pill badge-default">$4.99</span>
+                                </h2>
+                                . . .
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <h2 class="mt-0">Weekend Grand Buffet <span class="badge badge-danger">NEW</span></h2>
+                            <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five
+                                different salads, six enticing
+                                appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft
+                                drinks.
+                                All for just $19.99 per person.
+                            </p>
+                        </div>
+                        <div class="carousel-item">
+                            <h2 class="mt-0">Alberto Somayya</h2>
+                            <h4>Executive Chef</h4>
+                            <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide
+                                International experience having worked closely with
+                                whos-wh
+                                o in the culinary world, he specializes in
+                                creating mouthwatering Indo-Italian fusion experiences.
+                            </p>
+                        </div>
+                    </div>
+                    <ol class="carousel-indicators">
+                        <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#mycarousel" data-slide-to="1"></li>
+                        <li data-target="#mycarousel" data-slide-to="2"></li>
+                    </ol>
+                    <a class="carousel-control-prev" href="#mycarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                    
+
+                </div>
+
+            </div>
+        </div>
+
         <div class="container">
             <div class="row row-header">
-                <div class="col-12 col-sm-8">
+                <div class="col-md-2 order-md-2">
+                    <h1>Our Lipsmacking Culinary Creations</h1>
+                </div>
+                <div class="col-md-8 order-md-1">
                     <div class="media">
                         <img class="d-flex mr-3 img-thumbnail align-self-center"
                             src="Bootstrap4 (1)/Bootstrap4/conFusion/img/img/uthappizza.png" alt="Uthappizza">
@@ -93,9 +146,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-sm-2">
-                    <h1>Our Lipsmacking Culinary Creations</h1>
-                </div>
+
             </div>
             <hr>
         </div>
@@ -116,7 +167,7 @@
                                 All for just $19.99 per person.
                             </p>
                         </div>
-                        <img class="d-flex mr-3 img-thumbnail align-self-center"
+                        <img class="d-flex mr-3 img-thumbnail align-self-center "
                             src="Bootstrap4 (1)/Bootstrap4/conFusion/img/img/buffet.png" alt="Alberto Somayya">
                     </div>
                 </div>
@@ -126,7 +177,10 @@
 
         <div class="container">
             <div class="row row-header">
-                <div class="col-12 col-sm-8">
+                <div class="col-md-2 order-md-2">
+                    <h1>Meet our Culinary Specialists</h1>
+                </div>
+                <div class="col-md-8 order-md-1">
                     <div class="media">
                         <img class="d-flex mr-3 img-thumbnail align-self-center"
                             src="Bootstrap4 (1)/Bootstrap4/conFusion/img/img/alberto.png" alt="Alberto Somayya">
@@ -142,91 +196,78 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-sm-2">
-                    <h1>Meet our Culinary Specialists</h1>
-                </div>
+
             </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card mx-auto my-5 col-lg-8">
-                    <div>
-                        <h4 class="bg-warning text-white">Reserve a Table</h4>
-                    </div>
-                    <div class="card-body">
-                        <form>
-                            <div class="form-group">
-                                <div class="row">
-                                    <div class="col-12 col-sm-2">
-                                        <label for="guests">Number of Guests</label>
-                                    </div>
-                                    <div class="col-12 col-sm-1">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="guests" id="guests1"
-                                                value="1" checked>
-                                            <label class="form-check-label" for="guests1">1</label>
+            <div class="row col d-flex justify-content-center " id="reserve-form">
+                <div class="col-sm-7">
+                    <div class="card ">
+                        <div class="card-header bg-warning">
+                            <h4 class=" text-white">Reserve a Table</h4>
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <label for="guests">Number of Guests</label>
                                         </div>
-                                    </div>
-                                    <div class="col-12 col-sm-1">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="guests" id="guests2"
-                                                value="2">
-                                            <label class="form-check-label" for="guests2">2</label>
+                                        <div class="col-sm-9">
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="guests" id="guests1"
+                                                    value="1" checked>
+                                                <label class="form-check-label" for="guests1">1</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="guests" id="guests2"
+                                                    value="2">
+                                                <label class="form-check-label" for="guests2">2</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="guests" id="guests3"
+                                                    value="3">
+                                                <label class="form-check-label" for="guests3">3</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="guests" id="guests4"
+                                                    value="4">
+                                                <label class="form-check-label" for="guests4">4</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="guests" id="guests5"
+                                                    value="5">
+                                                <label class="form-check-label" for="guests5">5</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="guests" id="guests6"
+                                                    value="6">
+                                                <label class="form-check-label" for="guests6">6</label>
+                                            </div>
                                         </div>
+
                                     </div>
-                                    <div class="col-12 col-sm-1">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="guests" id="guests3"
-                                                value="3">
-                                            <label class="form-check-label" for="guests3">3</label>
+                                </div>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-2">
+                                            <label for="date">Date and Time</label>
                                         </div>
-                                    </div>
-                                    <div class="col-12 col-sm-1">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="guests" id="guests4"
-                                                value="4">
-                                            <label class="form-check-label" for="guests4">4</label>
+                                        <div class="col-12 col-sm-4">
+                                            <input class="form-control" id="date" placeholder="Date" required>
                                         </div>
-                                    </div>
-                                    <div class="col-12 col-sm-1">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="guests" id="guests5"
-                                                value="5">
-                                            <label class="form-check-label" for="guests5">5</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-sm-1">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="guests" id="guests6"
-                                                value="6">
-                                            <label class="form-check-label" for="guests6">6</label>
+                                        <div class="col-12 col-sm-4">
+                                            <input class="form-control" id="time" placeholder="Time" required>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="row">
-                                    <div class="col-12 col-sm-2">
-                                        <label for="date">Date and Time</label>
-                                    </div>
-                                    <div class="col-12 col-sm-4">
-                                        <input class="form-control" id="date" placeholder="Date" required>
-                                    </div>
-                                    <div class="col-12 col-sm-4">
-                                        <input class="form-control" id="time" placeholder="Time" required>
-                                    </div>
-                                </div>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Reserve</button>
-                        </form>
+                                <button type="submit" class="btn btn-primary">Reserve</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
-
     </div>
-
+    <br>
 
     <footer class="footer">
         <div class="container">
