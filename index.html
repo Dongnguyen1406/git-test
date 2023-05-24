@@ -372,6 +372,10 @@
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script>
         $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+
+        $(document).ready(function () {
             // Single carousel control button
             var carouselButton = $("#carouselButton");
             var carouselIcon = $("#carousel-button-icon");
