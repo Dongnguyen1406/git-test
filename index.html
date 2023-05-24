@@ -122,12 +122,11 @@
                         <span class="carousel-control-next-icon"></span>
                     </a>
                     <div class="btn-group" id="carouselButton">
-                        <button class="btn btn-danger btn-sm" id="carousel-pause">
-                            <span class="fa fa-pause"></span>
+
+                        <button class="btn btn-danger btn-sm" id="carouselButton">
+                            <span id="carousel-button-icon" class="fa fa-pause"></span>
                         </button>
-                        <button class="btn btn-danger btn-sm" id="carousel-play">
-                            <span class="fa fa-play"></span>
-                        </button>
+
                     </div>
 
 
@@ -373,17 +372,29 @@
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script>
         $(document).ready(function () {
-            $('[data-toggle="tooltip"]').tooltip();
-        });
-        $(document).ready(function () {
-            $("#mycarousel").carousel({ interval: 2000 });
-            $("#carousel-pause").click(function () {
-                $("#mycarousel").carousel('pause');
+            // Single carousel control button
+            var carouselButton = $("#carouselButton");
+            var carouselIcon = $("#carousel-button-icon");
+
+            // Initialize the carousel
+            $("#myCarousel").carousel();
+
+            // Handle carousel button click
+            carouselButton.click(function () {
+                if (carouselIcon.hasClass('fa-pause')) {
+                    // Carousel is currently cycling, pause it
+                    $("#myCarousel").carousel('pause');
+                    carouselIcon.removeClass('fa-pause');
+                    carouselIcon.addClass('fa-play');
+                } else {
+                    // Carousel is currently paused, start cycling
+                    $("#myCarousel").carousel('cycle');
+                    carouselIcon.removeClass('fa-play');
+                    carouselIcon.addClass('fa-pause');
+                }
             });
-            $("#carousel-play").click(function () {
-                $("#mycarousel").carousel('cycle');
-            });
         });
+
     </script>
 </body>
 
