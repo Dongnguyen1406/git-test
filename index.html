@@ -13,8 +13,11 @@
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
     <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Script JS -->
+    <script src="js/scripts.js"></script>
 </head>
-</head>
+
 
 <body>
     <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
@@ -24,8 +27,7 @@
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <a class="navbar-brand" href="#"><img src="Bootstrap4 (1)/Bootstrap4/conFusion/img/img/logo.png"
-                            height="30" width="41"></a>
+                    <a class="navbar-brand" href="#"><img src="Bootstrap4 (1)/Bootstrap4/conFusion/img/img/logo.png" height="30" width="41"></a>
                 </div>
             </div>
 
@@ -41,8 +43,8 @@
                                 class="fa fa-address-card fa-lg"></span> Contact</a></li>
                     <li>
                         <span class="navbar-text">
-                            <a data-toggle="modal" data-target="#loginModal">
-                                <span class="fa fa-sign-in"></span> Login</a>
+                            <a>
+                                <span class="fa fa-sign-in" id="loginLink"></span> Login</a>
                         </span>
                     </li>
                 </ul>
@@ -64,10 +66,11 @@
                     </div>
                     <div class="col-12 col-sm-6">
                         <br><br>
-                        <a role="button" class="btn btn-block nav-link btn-warning" data-toggle="tooltip"
-                            data-html="true" title="Or Call us at  <br><strong>+852 12345678</strong>"
-                            data-placement="bottom" href="#reserve-form">Reserve Table</a>
+                        <a type="button" class="btn btn-block nav-link btn-warning" id="reserveTableButton" data-html="true"
+                            title="Or Call us at  <br><strong>+852 12345678</strong>" data-placement="bottom"
+                            href="#reserveTableModal">Reserve Table</a>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -80,8 +83,7 @@
                 <div id="mycarousel" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner" role="listbox">
                         <div class="carousel-item active">
-                            <img class="d-block img-fluid"
-                                src="Bootstrap4 (1)/Bootstrap4/conFusion/img/img/uthappizza.png" alt="Uthappizza">
+                            <img class="d-block img-fluid" src="Bootstrap4 (1)/Bootstrap4/conFusion/img/img/uthappizza.png" alt="Uthappizza">
                             <div class="carousel-caption d-none d-md-block">
                                 <h2>Uthappizza
                                     <span class="badge badge-danger">HOT</span>
@@ -128,8 +130,6 @@
                         </button>
 
                     </div>
-
-
                 </div>
 
             </div>
@@ -142,8 +142,8 @@
                 </div>
                 <div class="col-md-8 order-md-1">
                     <div class="media">
-                        <img class="d-flex mr-3 img-thumbnail align-self-center"
-                            src="Bootstrap4 (1)/Bootstrap4/conFusion/img/img/uthappizza.png" alt="Uthappizza">
+                        <img class="d-flex mr-3 img-thumbnail align-self-center" src="Bootstrap4 (1)/Bootstrap4/conFusion/img/img/uthappizza.png"
+                            alt="Uthappizza">
                         <div class="media-body">
                             <h2 class="mt-0"> Uthappizza &nbsp<span class="badge badge-danger">HOT</span>&nbsp<span
                                     class="badge badge-pill badge-secondary">$4.99</span></h2>
@@ -175,8 +175,8 @@
                                 All for just $19.99 per person.
                             </p>
                         </div>
-                        <img class="d-flex mr-3 img-thumbnail align-self-center "
-                            src="Bootstrap4 (1)/Bootstrap4/conFusion/img/img/buffet.png" alt="Alberto Somayya">
+                        <img class="d-flex mr-3 img-thumbnail align-self-center " src="Bootstrap4 (1)/Bootstrap4/conFusion/img/img/buffet.png"
+                            alt="Alberto Somayya">
                     </div>
                 </div>
             </div>
@@ -190,8 +190,8 @@
                 </div>
                 <div class="col-md-8 order-md-1">
                     <div class="media">
-                        <img class="d-flex mr-3 img-thumbnail align-self-center"
-                            src="Bootstrap4 (1)/Bootstrap4/conFusion/img/img/alberto.png" alt="Alberto Somayya">
+                        <img class="d-flex mr-3 img-thumbnail align-self-center" src="Bootstrap4 (1)/Bootstrap4/conFusion/img/img/alberto.png"
+                            alt="Alberto Somayya">
                         <div class="media-body">
                             <h2 class="mt-0">Alberto Somayya</h2>
                             <h4>Executive Chef</h4>
@@ -206,14 +206,18 @@
                 </div>
 
             </div>
-            <div class="row col d-flex justify-content-center " id="reserve-form">
-                <div class="col-sm-7">
-                    <div class="card ">
-                        <div class="card-header bg-warning">
-                            <h4 class=" text-white">Reserve a Table</h4>
-                        </div>
-                        <div class="card-body">
-                            <form>
+
+            <div class="row col d-flex justify-content-center" >
+                <div  class="modal fade" id="reservationModal" >
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header" style="background-color: rgb(99, 9, 184);">
+                                <h5 class="modal-title text-white">Reserve a Table</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body" style="background-color: rgb(190, 147, 230);">
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-sm-3">
@@ -255,24 +259,40 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <div class="row">
-                                        <div class="col-12 col-sm-2">
-                                            <label for="date">Date and Time</label>
-                                        </div>
-                                        <div class="col-12 col-sm-4">
-                                            <input class="form-control" id="date" placeholder="Date" required>
-                                        </div>
-                                        <div class="col-12 col-sm-4">
-                                            <input class="form-control" id="time" placeholder="Time" required>
-                                        </div>
+                                    <label for="section">Section&emsp; &emsp; &emsp; &ensp; </label>
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-success active">
+                                            <input type="radio" name="section" id="nonSmoking" autocomplete="off"
+                                                checked> Non-Smoking
+                                        </label>
+                                        <label class="btn btn-danger">
+                                            <input type="radio" name="section" id="smoking" autocomplete="off">
+                                            Smoking
+                                        </label>
                                     </div>
                                 </div>
-                                <button type="submit" class="btn btn-primary">Reserve</button>
-                            </form>
+                                <div class="form-group row">
+                                    <div class=" col-md-3">
+                                        <label for="date">Date and time</label>
+                                    </div>
+                                    <div class="date col-md-4">
+                                        <input type="" class="form-control" id="date" name="date">
+                                    </div>
+                                    <div class="time col-md-4">
+                                        <input type="" class="form-control" id="time" name="time">
+                                    </div>
+                                </div>
+                                <form>
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                    <button type="submit" class="btn btn-primary">Reserve</button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+
         </div>
     </div>
     <br>
@@ -325,15 +345,15 @@
         </div>
     </footer>
 
-    <div id="loginModal" class="modal fade" role="dialog">
-        <div class="modal-dialog modal-lg" role="content">
+    <div class="modal fade" role="dialog" id="loginModal">
+        <div class="modal-dialog modal-lg" role="content" >
             <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
+            <div class="modal-content" >
+                <div class="modal-header" style="background-color: rgb(99, 9, 184);">
                     <h4 class="modal-title">Login </h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body" style="background-color: rgb(190, 147, 230);">
                     <form>
                         <div class="form-row">
                             <div class="form-group col-sm-12">
@@ -370,36 +390,7 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('[data-toggle="tooltip"]').tooltip();
-        });
-
-        $(document).ready(function () {
-            // Single carousel control button
-            var carouselButton = $("#carouselButton");
-            var carouselIcon = $("#carousel-button-icon");
-
-            // Initialize the carousel
-            $("#myCarousel").carousel();
-
-            // Handle carousel button click
-            carouselButton.click(function () {
-                if (carouselIcon.hasClass('fa-pause')) {
-                    // Carousel is currently cycling, pause it
-                    $("#myCarousel").carousel('pause');
-                    carouselIcon.removeClass('fa-pause');
-                    carouselIcon.addClass('fa-play');
-                } else {
-                    // Carousel is currently paused, start cycling
-                    $("#myCarousel").carousel('cycle');
-                    carouselIcon.removeClass('fa-play');
-                    carouselIcon.addClass('fa-pause');
-                }
-            });
-        });
-
-    </script>
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>

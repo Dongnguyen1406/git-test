@@ -1,0 +1,64 @@
+body {
+    background-color: rgb(50, 48, 48);
+}
+
+.header {
+    position: relative;
+    background-image: url("Images/pizza1.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    width: 80%;
+    height: 183px;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+.header-content {
+    position: absolute;
+    padding-bottom: 50px;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: xx-large;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 34%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+  .sale-overlay {
+    position: absolute;
+    top: 4%;
+    left: 11%;
+    transform: translate(-50%, -50%);
+    background-color:rgb(236, 236, 26);
+    color: white;
+    padding: 5px 10px;
+    color: black;
+    font-weight: 500;
+  }
+  .old-price {
+    text-decoration: line-through;
+  }
+  
+  .nav-item:hover .nav-link {
+    border: 1px solid white;
+  }
+  a.navbar-brand.text-white {
+    font-size: 29px;
+}
+.container.ml-auto.mr-0 {
+    padding-left: 618px;
+}
+ul.navbar-nav {
+    display: -webkit-inline-box;
+}
+
+
+
+  
