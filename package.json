@@ -7,7 +7,7 @@
     "lite": "lite-server",
     "test": "echo \"Error: no test specified\" && exit 1",
     "scss": "node-sass -o css/ css/",
-    "start": "npm run watch:all",
+    "start": "npm run lite",
     "watch:scss": "onchange \"css/*.scss\" -- npm run scss",
     "watch:all": "parallelshell \"npm run watch:scss\" \"npm run lite\"",
     "clean": "rimraf dist",
